@@ -86,3 +86,97 @@ docker save -o <output_file>.tar <image_name>
 - Replace `<placeholders>` with actual names or IDs as per your Docker setup.
 - These commands cover a wide range of Docker functionalities, from managing containers and images to networking, logging, and system information.
 ```
+
+
+
+
+```js
+##Dockerfile for Node JS
+# Use an official Node.js runtime as a parent image
+
+FROM node:14
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the application code to the working directory
+COPY . .
+
+# Expose port 3000 to the outside world
+EXPOSE 3000
+
+# Command to run the application
+CMD ["npm", "start"]
+
+docker build -t my-node-app .
+
+docker run -p 3000:3000 my-node-app
+```
+
+```html
+##Verify and Test:
+Open a web browser and navigate to http://localhost:3000 (or the port you specified) to verify that your application is running correctly inside the Docker container.
+```
+
+1. **Create a Dockerfile**:
+   Create a new file named `Dockerfile` (without any file extension) in your project directory.
+
+   ```bash
+   touch Dockerfile
+   ```
+
+2. **Edit Dockerfile**:
+   Open `Dockerfile` in a text editor and add the following instructions:
+
+   ```Dockerfile
+   # Use an official Node.js runtime as a parent image
+   FROM node:14
+
+   # Set the working directory in the container
+   WORKDIR /usr/src/app
+
+   # Copy package.json and package-lock.json to the working directory
+   COPY package*.json ./
+
+   # Install dependencies
+   RUN npm install
+
+   # Copy the rest of the application code to the working directory
+   COPY . .
+
+   # Expose port 3000 to the outside world
+   EXPOSE 3000
+
+   # Command to run the application
+   CMD ["npm", "start"]
+   ```
+
+3. **Build the Docker Image**:
+   Now, build the Docker image using the `docker build` command. Make sure you are in the directory where your Dockerfile is located.
+
+   ```bash
+   docker build -t my-node-app .
+   ```
+
+   - `-t my-node-app`: Tags your image with the name `my-node-app` for easy reference.
+   - `.`: Specifies the build context as the current directory.
+
+4. **Run a Container from the Image**:
+   Once the image is built, you can run a container based on it:
+
+   ```bash
+   docker run -p 3000:3000 my-node-app
+   ```
+
+   - `-p 3000:3000`: Maps port 3000 of the host machine to port 3000 inside the container, allowing access to your Node.js application.
+   - `my-node-app`: The name of the Docker image to use.
+
+5. **Access Your Application**:
+   Open a web browser and navigate to `http://localhost:3000` to see your Node.js application running inside the Docker container.
