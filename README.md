@@ -120,10 +120,11 @@ docker build -t my-node-app .
 docker run -p 3000:3000 my-node-app
 ```
 
-```html
-##Verify and Test:
-Open a web browser and navigate to http://localhost:3000 (or the port you specified) to verify that your application is running correctly inside the Docker container.
-```
+
+**Verify and Test:
+   ```bash
+   Open a web browser and navigate to http://localhost:3000 (or the port you specified) to verify that your application is running correctly inside the Docker container.
+   ```
 
 1. **Create a Dockerfile**:
    Create a new file named `Dockerfile` (without any file extension) in your project directory.
