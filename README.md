@@ -121,7 +121,9 @@ docker run -p 3000:3000 my-node-app
 ```
 
 
-**Verify and Test:
+```html
+Verify and Test:
+```
    ```bash
    Open a web browser and navigate to http://localhost:3000 (or the port you specified) to verify that your application is running correctly inside the Docker container.
    ```
