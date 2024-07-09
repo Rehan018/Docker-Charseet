@@ -89,3 +89,53 @@
     - Beginner: Manage multiple working trees attached to the same repository.
     - Intermediate: Create, list, remove, or prune worktrees.
     - Advanced: Use worktrees for parallel development or testing.
+
+### E
+
+1. **`git filter-branch`**
+   - Advanced: Rewrite branches by applying custom filters.
+
+### G
+
+2. **`git grep`**
+   - Advanced: Search through tracked files for specific patterns.
+
+### I
+
+3. **`git instaweb`**
+   - Advanced: Automatically start a web server serving the repository.
+
+### L
+
+4. **`git log`**
+   - Advanced: Show commit logs with extensive filtering options (`--author`, `--grep`, etc.).
+
+### O
+
+5. **`git reflog`**
+   - Advanced: Manage and inspect reflog information.
+
+### Q
+
+6. **`git quiltimport`**
+   - Advanced: Applies a series of patches from Quilt-style patches.
+
+### U
+
+7. **`git update-index`**
+   - Advanced: Register file contents in the index.
+
+### V
+
+8. **`git verify-commit`**
+   - Advanced: Check the GPG signature of commits.
+
+### X
+
+9. **`git xenomerge`**
+   - Advanced: Merge three branches using an octopus merge.
+
+### Z
+
+10. **`git submodule`**
+    - Advanced: Manage submodules within the repository.
